@@ -19,6 +19,9 @@ Silver Stars have spread around from all around space, and Mario's quest is to c
 ---Features---
 
 > 102 Stars across 23 worlds (side levels and hub worlds included)
+
 > Custom music from various games
+
 > Fall damage DISABLED
+
 > No 100 coin stars
