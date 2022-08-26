@@ -10,3 +10,8 @@ gLevelValues.entryLevel = LEVEL_CASTLE_GROUNDS
 gLevelValues.exitCastleLevel = LEVEL_CASTLE_GROUNDS
 gLevelValues.exitCastleWarpNode = 0x0A
 gLevelValues.skipCreditsAt = LEVEL_CASTLE_GROUNDS
+
+------------
+-- camera --
+------------
+camera_set_use_course_specific_settings(false)

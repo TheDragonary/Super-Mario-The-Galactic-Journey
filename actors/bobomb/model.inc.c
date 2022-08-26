@@ -16,7 +16,6 @@ ALIGNED8 u8 bobomb_buddy_geo__texture_0801FA60[] = {
 ALIGNED8 u8 bobomb_buddy_geo__texture_08020A60[] = {
 #include "actors/bobomb/bobomb_buddy_geo_0x8020a60_custom.rgba16.inc.c"
 };
-
 #include "custom.model.inc.h"
 Vtx VB_bobomb_buddy_geo_0x8022a60[] = {
 	{{{ 133, -47, 0 }, 0, { 480, 0 }, { 255, 255, 255, 255}}},
