@@ -3,8 +3,6 @@ Super Mario The Galactic Journey Romhack by Fares242
 
 Ported to co-op by Dragonary
 
-# Super Mario The Galactic Journey
-
 ## Story
 
 There exists a Star of great power placed in its altar in the center of the universe.
