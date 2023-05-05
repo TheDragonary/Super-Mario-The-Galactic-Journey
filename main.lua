@@ -3,6 +3,7 @@
 -- incompatible: romhack
 
 gLevelValues.entryLevel = LEVEL_CASTLE_GROUNDS
+gLevelValues.coinsRequiredForCoinStar = -1
 
 camera_set_use_course_specific_settings(false)
 
