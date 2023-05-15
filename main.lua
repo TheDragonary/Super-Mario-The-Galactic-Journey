@@ -51,6 +51,7 @@ smlua_audio_utils_replace_sequence(0x2E, 0x17, 75, "2E_Seq_custom")
 smlua_audio_utils_replace_sequence(0x2F, 0x1B, 75, "2F_Seq_custom")
 smlua_audio_utils_replace_sequence(0x31, 0x17, 75, "31_Seq_custom")
 smlua_audio_utils_replace_sequence(0x33, 0x13, 75, "33_Seq_custom")
+smlua_audio_utils_replace_sequence(SEQ_MENU_STAR_SELECT, 26, 127, "star_select")
 
 vec3f_set(gLevelValues.starPositions.KoopaBobStarPos, 3030, 4500, -4600)
 vec3f_set(gLevelValues.starPositions.KoopaThiStarPos, 7100, -1300, -6000)
@@ -76,41 +77,3 @@ function no_fall_damage(m)
  m.peakHeight = m.pos.y
 end
 hook_event(HOOK_MARIO_UPDATE, no_fall_damage)
-
-local counter_1st_byte = 0
-local counter_2nd_byte = 0
-
----@param m MarioState
-hook_event(HOOK_MARIO_UPDATE, function (m)
-    if m.playerIndex ~= 0 then return end
-
-    if m.controller.buttonPressed & L_JPAD ~= 0 then
-        counter_1st_byte = counter_1st_byte - 1
-        djui_chat_message_create("1st Byte: " .. tostring(counter_1st_byte))
-    end
-    if m.controller.buttonPressed & R_JPAD ~= 0 then
-        counter_1st_byte = counter_1st_byte + 1
-        djui_chat_message_create("1st Byte: " .. tostring(counter_1st_byte))
-    end
-    if m.controller.buttonPressed & D_JPAD ~= 0 then
-        counter_2nd_byte = counter_2nd_byte - 1
-        djui_chat_message_create("2nd Byte: " .. tostring(counter_2nd_byte))
-    end
-    if m.controller.buttonPressed & U_JPAD ~= 0 then
-        counter_2nd_byte = counter_2nd_byte + 1
-        djui_chat_message_create("2nd Byte: " .. tostring(counter_2nd_byte))
-    end
-
-    if m.controller.buttonPressed & L_TRIG ~= 0 then
-        spawn_non_sync_object(
-            bhvNoteblock_MOP,
-            E_MODEL_NOTEBLOCK,
-            m.pos.x, m.pos.y + 200, m.pos.z,
-            ---@param obj Object
-            function (obj)
-                obj.oBehParams = counter_1st_byte << 24
-                obj.oBehParams2ndByte = counter_2nd_byte
-            end
-        )
-    end
-end)
