@@ -1,5 +1,5 @@
 -- name: The Galactic Journey
--- description: Super Mario The Galactic Journey is a rom hack made by Fares242\n\nIt features 102 stars across 23 worlds.\nFall damage is disabled and there are no 100 coin stars.\n\nPorted to coop by Dragonary
+-- description: Super Mario The Galactic Journey is a romhack made by Fares242\n\nIt has 102 stars across 23 worlds.\nFall damage is disabled and there are no 100 coin stars.\n\nPorted to co-op by Dragonary
 -- incompatible: romhack
 
 gLevelValues.entryLevel = LEVEL_CASTLE_GROUNDS
