@@ -1,4 +1,4 @@
-# Super Mario The Galactic Journey (sm64ex-coop)
+# Super Mario The Galactic Journey (sm64ex-coop / sm64coopdx)
 Super Mario The Galactic Journey Romhack by Fares242
 
 Ported to co-op by Dragonary
